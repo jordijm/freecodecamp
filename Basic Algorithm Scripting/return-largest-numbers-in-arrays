@@ -1,6 +1,6 @@
 function largestOfFour(arr) {
   // You can do this!
- let max = 0;
+
  let returnArray = [];
  
   for(let i = 0; i<arr.length ;i++)
