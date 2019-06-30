@@ -1,0 +1,19 @@
+function frankenSplice_MEJOR_SOLUCION(arr1, arr2, n) {
+  // It's alive. It's alive!
+  let miArray = arr2.slice();
+  miArray.splice(n,0,[...arr1]);
+  return miArray;
+  
+}
+
+function frankenSplice(arr1, arr2, n) {
+  // It's alive. It's alive!
+  let localArray = arr2.slice();
+  for (let i = 0; i < arr1.length; i++) {
+    localArray.splice(n, 0, arr1[i]);
+    n++;
+  }
+  return localArray;
+}
+
+console.log(frankenSplice(["claw", "tentacle"], ["head", "shoulders", "knees", "toes"], 2));
