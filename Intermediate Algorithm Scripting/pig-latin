@@ -1,0 +1,22 @@
+function translatePigLatin(str) {
+
+  var pigLatin = "";
+  var vocales = /[aeiou]/gi;
+
+  if (str[0].match(vocales))
+    //empieza por vocal
+    pigLatin = str + "way";
+  else if(!str.match(vocales)) 
+    //solo consonantes
+    pigLatin =  str + "ay";
+  else {
+    //indice de la primera vocal
+    var indiceVocal = str.indexOf(str.match(vocales)[0]);
+    //subcadenas desde el indice al final + el principio + 'ay'
+    pigLatin = str.substr(indiceVocal) + str.substr(0, indiceVocal) + 'ay';
+    }   
+ 
+  return pigLatin;
+}
+
+console.log(translatePigLatin("aside"));
