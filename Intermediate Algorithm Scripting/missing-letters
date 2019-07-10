@@ -1,0 +1,20 @@
+// Adding this solution for the sake of avoiding using 'for' and 'while' loops.
+// See the explanation for reference as to why. It's worth the effort.
+
+function fearNotLetter(str) {
+  var compare = str.charCodeAt(0);
+  var falta;
+
+  str.split('').map(function(letra,indice) {
+    if (str.charCodeAt(indice) == compare) {
+      compare++;
+    } else {
+      falta = String.fromCharCode(compare);
+    }
+  });
+
+  return falta;
+}
+
+// test here
+console.log(fearNotLetter("abce"));
