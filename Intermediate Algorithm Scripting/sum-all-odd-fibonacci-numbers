@@ -1,0 +1,19 @@
+function sumFibs(num) {
+  var fibo_1 = 1;
+  var fibo_2 = 0;
+  var serie = 0;
+
+ while (fibo_1 <= num){
+  
+    if(fibo_1 % 2 != 0)
+      serie +=fibo_1;
+
+    fibo_1 += fibo_2;
+    fibo_2 = fibo_1 - fibo_2;  
+    
+  }
+  
+  return serie;
+}
+
+console.log(sumFibs(75024));
