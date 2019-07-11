@@ -1,0 +1,15 @@
+function uniteUnique(arr) {
+  var args = [...arguments];
+  var resultado = [];
+  
+  for(let i=0;i<args.length;i++){
+    for(let j=0;j<args[i].length;j++){
+      if(!resultado.includes(args[i][j])) 
+        resultado.push(args[i][j]);
+    }
+  }
+
+  return resultado;
+}
+
+console.log(uniteUnique([1, 3, 2], [5, 2, 1, 4], [2, 1]));
