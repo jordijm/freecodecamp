@@ -1,0 +1,16 @@
+function convertHTML(str) {
+  // &colon;&rpar;
+  
+   var htmlEntities = {
+        '&':'&amp;',
+        '<':'&lt;',
+        '>':'&gt;',
+        '"':'&quot;',
+        '\'':"&apos;"
+      };
+  
+  return str.split("").map( (caracter) => htmlEntities[caracter] || caracter).join("");
+
+}
+
+console.log(convertHTML('Stuff in "quotation marks"'));
